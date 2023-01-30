@@ -95,10 +95,10 @@
 # ADD YOUR CODE BELOW:
 
 z=0
-for x in $@
+for x in "$@"
 do
 a=`basename $x`
-c=`grep ">" $a | wc -l`
+c=`grep ">" $x | wc -l`
 echo $c $a
 z=$(($z + $c))
 done
